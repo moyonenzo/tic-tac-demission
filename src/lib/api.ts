@@ -32,6 +32,19 @@ class Api {
         });
         return await this.request(request);
     }
+
+    async put(path: string, body: any) {
+        const request = new Request(this.base_url + path, {
+            method: 'PUT',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            mode: 'cors',
+            body: JSON.stringify(body)
+        });
+        return await this.request(request);
+    }
 }
 
 export default new Api();

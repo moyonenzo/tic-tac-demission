@@ -8,7 +8,7 @@
     export let date : Date;
 </script>
 
-<Card.Root>
+<Card.Root class="w-full">
     <Card.Content>
         <div class="flex h-5 items-center space-x-4 text-2xl">
             <Avatar.Root>
