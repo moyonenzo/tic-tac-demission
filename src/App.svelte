@@ -1,5 +1,5 @@
 <script lang="ts">
-    import axios from "axios";
+    import api from "$lib/api";
 
     import { ModeWatcher } from "mode-watcher";
     import ExclamationTriangle from "svelte-radix/ExclamationTriangle.svelte";
@@ -8,8 +8,8 @@
     import * as Alert from "$lib/components/ui/alert/index.js";
 
     const fetch_counters = async () => {
-        const response = await axios.get("http://85.215.133.119/counters/");
-        return response.data;
+        const response = await api.get("/counters");
+        return response;
     }
 </script>
 
